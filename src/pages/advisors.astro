@@ -1,11 +1,11 @@
 ---
 import Head from "@components/Head.astro";
 import AdvisorsHero from "@components/AdvisorsHero.astro";
-import Services from "@components/Services.astro";
+import AdvisorsServices from "@components/AdvisorsServices.astro";
 import HomeCard from "@components/HomeCard.astro";
 import Foot from "@components/Foot.astro";
 import { cards } from '@assets/data';
-import { directusData } from '@assets/data/homePage'
+import { directusData } from '@assets/data/advisorsPage'
 const HomeCardData = await directusData()
 ---
 
@@ -13,7 +13,7 @@ const HomeCardData = await directusData()
 
 <div class="bg-white">
 	<AdvisorsHero />
-  <Services />
+  <AdvisorsServices />
 
   <!-- Overlapping cards -->
   <section
