@@ -1,33 +1,39 @@
-<!--
-  This example requires some changes to your config:
-
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
+<script>
+  let name, email;
+  function handleSubmit() {
+    let url = 'https://iiu.directus.app/items/contacts'
+    const request = fetch(url, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+      })
+    })
+    .then((response => {
+      response.json()
+    }))
   }
-  ```
--->
+</script>
 
-<form action="https://iiu.directus.app/items/contacts" method="POST">
+<div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+<form on:submit|preventDefault={handleSubmit}>
 Demo form
   <div>
-    <label for="name">What greeting do you want to say?</label>
-    <input name="name" id="say" value="Hi" />
+    <label for="name">What is your name?</label>
+    <input name="name" id="name" class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" bind:value={name} />
   </div>
   <div>
-    <label for="email">Who do you want to say it to?</label>
-    <input name="email" id="to" value="Mom" />
+    <label for="email">Who is your email?</label>
+    <input name="email" id="email" class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" bind:value={email} />
   </div>
   <div>
-    <button>Send my greetings</button>
+    <button type="submit" class="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Submit</button>
   </div>
 </form>
-
+</div>
 <!--
   This example requires updating your template:
 
