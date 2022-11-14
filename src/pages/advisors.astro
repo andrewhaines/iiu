@@ -1,19 +1,22 @@
 ---
 import Head from "@components/Head.astro";
 import AdvisorsHero from "@components/AdvisorsHero.astro";
+import AdvisorsUnique from "@components/AdvisorsUnique.astro";
 import AdvisorsServices from "@components/AdvisorsServices.astro";
-import HomeCard from "@components/HomeCard.astro";
+import DataCard from "@components/DataCard.astro";
+import ContactForm from "@components/AdvisorsContactForm.astro";
 import Foot from "@components/Foot.astro";
 import { cards } from '@assets/data';
 import { directusData } from '@assets/data/advisorsPage'
-const HomeCardData = await directusData()
+const DataCardData = await directusData()
 ---
 
 <Head />
 
 <div class="bg-white">
 	<AdvisorsHero />
-  <AdvisorsServices />
+  <AdvisorsUnique />
+	<AdvisorsServices />
 
   <!-- Overlapping cards -->
   <section
@@ -22,42 +25,12 @@ const HomeCardData = await directusData()
   >
     <h2 class="sr-only" id="contact-heading">Our services</h2>
     <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-8">
-      {HomeCardData.map(card => (
-				<HomeCard heading={card.heading} description={card.description}, linkText={card.linkText} link={card.link} />
+      {DataCardData.map(card => (
+				<DataCard heading={card.heading} description={card.description}, linkText={card.linkText} link={card.link} />
 			))}
     </div>
   </section>
 
-	<form action="https://formspree.io/f/xwkydjdz" method="POST">
-	  <div class="form-group">
-	    <label for="name" class="sr-only">Name</label>
-	    <input type="text" class="form-control border-bottom" id="input-name" aria-describedby="name" placeholder="Name" name="name" required>
-	  </div>
-		<div class="form-group">
-			<label for="email" class="sr-only">Email</label>
-	    <input type="email" class="form-control border-bottom" id="input-email" aria-describedby="email" placeholder="Email" name="email" required>
-	  </div>
-		<div class="form-group">
-			<label for="phone_number" class="sr-only">Phone number</label>
-	    <input type="phone_number" class="form-control border-bottom" id="input-phone_number" aria-describedby="phone_number" placeholder="Phone Number" name="phone_number" required>
-	  </div>
-		<div class="form-group">
-	    <label for="inquiry_type" class="sr-only">How can we help you?</label>
-	    <select class="form-control" id="input-inquiry_type" name="inquiry_type" required>
-				<option value="How can we help you?">How can we help you?</option>
-				<option value="I'm interested in selling my business">I'm think of selling my business</option>
-				<option value="I'm interested in buying a business">I'm interested in buying a business</option>
-				<option value="Business valuation">Business valuation</option>
-				<option value="Seeking financing">Seeking financing</option>
-	    </select>
-	  </div>
-		<div class="form-group">
-	    <label for="details" class="sr-only">Message</label>
-	    <textarea class="form-control" id="input-details" rows="3" placeholder="Message" name="details"></textarea>
-			<input type="hidden" name="_next" value="{{ 'emailed.html' | relative_url }}" />
-			<input type="text" name="_gotcha" style="display:none" />
-	  </div>
-	  <button type="submit" class="btn btn-success font-weight-bold layer-3" id=”contact-submit” value="Send">Submit<i class="far fa-arrow-right ml-2" aria-hidden="true"></i></button>
-	</form>
+	<ContactForm />
 </div>
 <Foot />

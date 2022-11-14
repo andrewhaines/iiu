@@ -1,7 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 import backgroundImage from "@images/stock-charts.jpg";
-import HomeCard from "@components/HomeCard.astro";
+import DataCard from "@components/DataCard.astro";
 import { companyCards } from '@assets/data/homePage';
 ---
 <div id="companies" class="relative bg-gray-800 pb-32">
@@ -34,7 +34,7 @@ import { companyCards } from '@assets/data/homePage';
   <h2 class="sr-only" id="contact-heading">Our companies</h2>
   <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-8">
     {companyCards.map(card => (
-      <HomeCard heading={card.heading} description={card.description}, linkText={card.linkText} link={card.link} />
+      <DataCard heading={card.heading} description={card.description}, linkText={card.linkText} link={card.link} />
     ))}
   </div>
 </section>
