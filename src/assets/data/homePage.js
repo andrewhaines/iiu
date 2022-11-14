@@ -16,7 +16,13 @@ export const companyCards = [
   {
     heading: 'IIU Financing',
     description: 'IIU Financing sources and structures financing to optimize transactions, working with equity investors, financial institutions and private credit funds to ensure a successful transaction or recapitalization.',
-    linkText: 'Visit website',
+    linkText: '',
+    link: '#'
+  },
+  {
+    heading: 'IIU Assets',
+    description: 'IIU Assets maintains an active portfolio of equity positions, including majority and minority positions in revenue-generating businesses.',
+    linkText: '',
     link: '#'
   },
   {

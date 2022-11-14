@@ -4,6 +4,5 @@ import image from "@astrojs/image";
 
 export default defineConfig({
   integrations: [tailwind(), image()],
-  site: 'https://andrewhaines.github.io',
-  base: '/iiu',
+  site: 'https://iiuinc.com'
 });
