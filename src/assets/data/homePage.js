@@ -20,14 +20,14 @@ export const companyCards = [
     link: '#'
   },
   {
-    heading: 'IIU Assets',
+    heading: 'IIU Equity',
     description: 'IIU Assets maintains an active portfolio of equity positions, including majority and minority positions in revenue-generating businesses.',
     linkText: '',
     link: '#'
   },
   {
-    heading: 'Wallach & Company, Inc.',
-    description: 'For more than 30 years, Wallach & Company has provided medical and related insurance to people traveling outside their home countries for work, study, or vacation.',
+    heading: 'IIU Specialty Risk.',
+    description: 'For more than 30 years, we have provided speciality insurance and risk management solutions to individuals and businesses requiring non-traditional underwriting through Lloyd's of London and other global underwriters.',
     linkText: 'Visit website',
     link: 'https://wallach.com'
   }

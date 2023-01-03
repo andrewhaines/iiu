@@ -9,7 +9,7 @@ export const servicesCards = [
   },
   {
     heading: 'Valuation & Financial Advisory',
-    description: 'We are active in the market and know how a business is valued beyond the balance sheet. If you already have an acquisition target in mind and are seeking ways to optimize transaction financing we can help. We work with you and our network of capital providers to provide the optimal financing solution.'
+    description: 'We are active in the market and know how a business is valued beyond the balance sheet. If you already have an acquisition target in mind and are seeking ways to optimize the transaction we can help. We work with you and our network of capital providers to provide the optimal financing solution.'
   },
   {
     heading: 'Capital Raising & Debt Advisory',
