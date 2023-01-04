@@ -27,8 +27,8 @@ export const companyCards = [
   },
   {
     heading: 'IIU Specialty Risk.',
-    description: 'For more than 30 years, we have provided speciality insurance and risk management solutions to individuals and businesses requiring non-traditional underwriting through Lloyd's of London and other global underwriters.',
-    linkText: 'Visit website',
-    link: 'https://wallach.com'
+    description: "For more than 30 years, we have provided speciality insurance and risk management solutions to individuals and businesses requiring non-traditional underwriting through Lloyd's of London and other global underwriters.",
+    linkText: '',
+    link: '#'
   }
 ]
