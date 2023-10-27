@@ -10,23 +10,23 @@ export const companyCards = [
   {
     heading: 'IIU Advisors',
     description: 'IIU Advisors is a premier mergers and acquisitions advisory firm focused on the middle market in Virginia and the Mid-Atlantic states &mdash; with over 50 years experience buying and selling operating businesses.',
-    linkText: 'Visit website',
+    linkText: 'Read more',
     link: '/advisors'
   },
   {
     heading: 'IIU Financing',
     description: 'IIU Financing sources and structures financing to optimize transactions, working with equity investors, financial institutions and private credit funds to ensure a successful transaction or recapitalization.',
-    linkText: '',
-    link: '#'
+    linkText: 'Read more',
+    link: '/financing'
   },
   {
     heading: 'IIU Equity',
-    description: 'IIU Assets maintains an active portfolio of equity positions, including majority and minority positions in revenue-generating businesses.',
-    linkText: '',
-    link: '#'
+    description: 'IIU Equity maintains an active portfolio of equity positions, including majority and minority positions in revenue-generating businesses.',
+    linkText: 'Read more',
+    link: '/equity'
   },
   {
-    heading: 'IIU Specialty Risk.',
+    heading: 'IIU Specialty Risk',
     description: "For more than 30 years, we have provided speciality insurance and risk management solutions to individuals and businesses requiring non-traditional underwriting through Lloyd's of London and other global underwriters.",
     linkText: '',
     link: '#'

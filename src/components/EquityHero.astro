@@ -1,18 +1,19 @@
 ---
 import Nav from "@components/Nav.astro";
 import { Image } from "@astrojs/image/components";
-import heroImage from "@images/richmond-skyline.jpg";
+import heroImage from "@images/ship-sunrise.jpg";
 ---
 <div class="relative bg-white">
   <Nav />
   <main class="lg:relative">
     <div class="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-40 lg:text-left">
-      <div class="px-4 sm:px-8 lg:w-3/5 xl:pr-16">
+      <div class="px-4 sm:px-8 lg:w-1/2 xl:pr-16">
         <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
           <span class="block xl:inline">IIU</span>
-          <span class="block text-sky-600 xl:inline">Advisors</span>
+          <span class="block text-sky-700 xl:inline">Equity</span>
         </h1>
-        <p class="mx-auto mt-3 max-w-md text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">Premier mergers and acquisitions advisory business focused on the middle market in Virginia and the Mid-Atlantic states.</p>
+        <p class="mx-auto mt-3 max-w-md text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">A private equity portfolio of operating businesses which we intend to own and operate for the long term.</p>
+        <!--
         <div class="hidden sm:mb-8 sm:mt-5 sm:flex sm:justify-left">
           <div class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             <span class="text-gray-600">
@@ -20,17 +21,20 @@ import heroImage from "@images/richmond-skyline.jpg";
             </span>
           </div>
         </div>
+        -->
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+          <!--
           <div class="rounded-md shadow">
-            <a href="#services" class="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-600 px-8 py-3 text-base font-medium text-white hover:bg-sky-700 md:py-4 md:px-10 md:text-lg">Our services &rarr;</a>
+            <a href="#services" class="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-700 px-8 py-3 text-base font-medium text-white hover:bg-sky-800 md:py-4 md:px-10 md:text-lg">Our criteria &rarr;</a>
           </div>
+          -->
           <div class="mt-3 sm:mt-0 sm:ml-3">
             <a href="mailto:a.haines@iiuinc.com" class="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-100 px-8 py-3 text-base font-medium text-sky-700 hover:bg-sky-200 md:py-4 md:px-10 md:text-lg">Contact us &rarr;</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-2/5">
+    <div class="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
       <Image
         src={heroImage}
         class="absolute inset-0 h-full w-full object-cover"

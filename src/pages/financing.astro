@@ -1,0 +1,24 @@
+---
+import Head from "@components/Head.astro";
+import FinancingHero from "@components/FinancingHero.astro";
+import FinancingAbout from "@components/FinancingAbout.astro";
+import FinancingServices from "@components/FinancingServices.astro";
+import DataCard from "@components/DataCard.astro";
+import ContactForm from "@components/AdvisorsContactForm.svelte";
+import Foot from "@components/Foot.astro";
+import { cards } from '@assets/data';
+---
+
+<Head />
+
+<div class="bg-white">
+	<FinancingHero />
+  <FinancingAbout />
+	<FinancingServices />
+
+	<!--
+	<ContactForm client:only />
+	-->
+	<!-- <script type="text/javascript" src="https://form.jotform.com/jsform/232994009892064"></script> -->
+</div>
+<Foot />

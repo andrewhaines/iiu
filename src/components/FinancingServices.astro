@@ -1,0 +1,44 @@
+---
+import { Image } from "@astrojs/image/components";
+import backgroundImage from "@images/stock-charts.jpg";
+import DataCard from "@components/DataCard.astro";
+import { servicesCards } from '@assets/data/financingPage';
+---
+<div id="services" class="relative bg-gray-800 pb-32">
+  <div class="absolute inset-0">
+    <Image
+      src={backgroundImage}
+      class="h-full w-full object-cover"
+      alt="Richmond skyline"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-500 mix-blend-multiply"
+      aria-hidden="true"
+    >
+    </div>
+  </div>
+  <div class="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+    <h1
+      class="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl"
+    >
+      Our areas of expertise
+    </h1>
+    <!--
+    <p class="mt-6 max-w-3xl text-xl text-gray-300">
+      We provide bespoke services to clients in various industry and commercial sectors. To find out more about our past client profiles please contact us.
+    </p>
+    -->
+  </div>
+</div>
+
+<!-- Overlapping cards -->
+<section
+  class="relative z-10 mx-auto -mt-32 max-w-7xl px-4 pb-32 sm:px-6 lg:px-8"
+  aria-labelledby="contact-heading"
+>
+  <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-8">
+    {servicesCards.map(card => (
+      <DataCard heading={card.heading} description={card.description}, linkText={card.linkText} link={card.link} />
+    ))}
+  </div>
+</section>

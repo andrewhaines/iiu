@@ -1,8 +1,8 @@
 ---
 import Head from "@components/Head.astro";
-import AdvisorsHero from "@components/AdvisorsHero.astro";
-import AdvisorsUnique from "@components/AdvisorsUnique.astro";
-import AdvisorsServices from "@components/AdvisorsServices.astro";
+import EquityHero from "@components/EquityHero.astro";
+import FinancingAbout from "@components/FinancingAbout.astro";
+import FinancingServices from "@components/FinancingServices.astro";
 import DataCard from "@components/DataCard.astro";
 import ContactForm from "@components/AdvisorsContactForm.svelte";
 import Foot from "@components/Foot.astro";
@@ -12,10 +12,10 @@ import { cards } from '@assets/data';
 <Head />
 
 <div class="bg-white">
-	<AdvisorsHero />
-  <AdvisorsUnique />
-	<AdvisorsServices />
-
-	<!-- <ContactForm client:only /> -->
+	<EquityHero />
+	<!--
+  <FinancingAbout />
+	<FinancingServices />
+	-->
 </div>
 <Foot />
